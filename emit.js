@@ -8,7 +8,7 @@ var count = 0;
 function emit() {
     var pos = getMousePos(e);
     var rad = 0;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     x = pos.x;
     y = pos.y;
     var ctx = canvas.getContext("2d");
