@@ -1,2 +1,2 @@
-# rainbow-circles
+# rainbow-generator
 Emit rainbow circles
