@@ -2,7 +2,7 @@ var c = document.getElementById("canvas");
 c.style.width = window.innerWidth;
 c.style.height = window.innerHeight;
 
-var colors = ["blue", "orange", "yellow", "green", "blue", "purple"]
+var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 var count = 0;
 
 function emit() {
@@ -15,7 +15,7 @@ function emit() {
     ctx.strokeStyle = colors[count];
     function frame() {
         if (rad == 10) {
-            count == (count + 1) % 7;
+            count += (count + 1) % 7;
             emit();
         }
         if (pos == 100) {
