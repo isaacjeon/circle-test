@@ -5,7 +5,7 @@ c.style.height = window.innerHeight;
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 var count = 0;
 
-function emit() {
+function emit(e) {
     var pos = getMousePos(e);
     var rad = 0;
     var id = setInterval(frame, 100);
