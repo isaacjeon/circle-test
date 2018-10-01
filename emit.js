@@ -1,5 +1,7 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+ctx.c.width  = window.innerWidth;
+ctx.c.height = window.innerHeight;
 
 function draw(e) {
     var pos = getMousePos(c, e);
