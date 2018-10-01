@@ -3,14 +3,13 @@ c.style.width = window.innerWidth;
 c.style.height = window.innerHeight;
 
 var context = canvas.getContext("2d");
-context.font="30px Arial";
+context.font="10px Arial";
 context.textAlign = "center";
 context.fillText("Click anywhere in this window", canvas.width/2, canvas.height/2);
 
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
-var count = 0;
 
-function emit() {
+function emit(col) {
     var pos = getCenterPos();
     var rad = 0;
     var id = setInterval(frame, 100);
@@ -19,12 +18,8 @@ function emit() {
     var ctx = canvas.getContext("2d");
     ctx.strokeStyle = colors[count];
     function frame() {
-        if (rad == 10) {
-            temp = count;
-            count = (count + 1) % 7;
-            emit();
-            count = temp;
-        }
+        if (rad == 10)
+            emit((col + 1) % 7);
         if (pos == 100) {
           clearInterval(id);
         } else {
@@ -50,5 +45,5 @@ c.onclick = function(){
         context.clearRect(0, 0, canvas.width, canvas.height);
         firstClick = false;
     }
-    emit();
+    emit(0);
 };
