@@ -41,10 +41,10 @@ function getCenterPos() {
 
 var firstClick = true;
 c.onclick = function(){
-    if (firstClick) {
+    /*if (firstClick) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         firstClick = false;
-    }
+    }*/
     emit(0);
 };
 
