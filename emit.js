@@ -1,5 +1,12 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+canvas.width = 500;
+canvas.height = 500;
+
+ctx.font="30px Arial";
+ctx.fillStyle = "white";
+ctx.textAlign = "center";
+ctx.fillText("Click anywhere in this window.", canvas.width/2, canvas.height/2);
 
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
@@ -12,7 +19,7 @@ function emit(col) {
     function frame() {
         if (rad == 10)
             emit((col + 1) % 7);
-        if (rad == 200) {
+        if (rad == 708) {
           clearInterval(id);
         } else {
             rad++;
@@ -32,13 +39,12 @@ function getCenterPos() {
     };
 }
 
-window.addEventListener('resize', resizeCanvas, false);
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    var firstClick = true;
-    c.onclick = function(){emit(0);};
-}
-resizeCanvas();
+var firstClick = true;
+c.onclick = function(){
+    if (firstClick) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        firstClick = false;
+    }
+    emit(0);
+};
 
