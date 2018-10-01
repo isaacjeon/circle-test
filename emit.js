@@ -15,7 +15,7 @@ function emit() {
     ctx.strokeStyle = colors[count];
     function frame() {
         if (rad == 10) {
-            count %= 7;
+            count == (count + 1) % 7;
             emit();
         }
         if (pos == 100) {
