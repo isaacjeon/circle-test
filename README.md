@@ -1,2 +1,2 @@
 # rainbow-generator
-Emit rainbow circles
+[Rainbow Generator](https://isaacjeon.github.io/rainbow-generator/)
