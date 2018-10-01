@@ -1,4 +1,5 @@
 var c = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 c.style.width = window.innerWidth;
 c.style.height = window.innerHeight;
 
@@ -15,7 +16,6 @@ function emit(col) {
     var id = setInterval(frame, 100);
     x = pos.x;
     y = pos.y;
-    var ctx = canvas.getContext("2d");
     ctx.strokeStyle = colors[col];
     function frame() {
         if (rad == 10)
