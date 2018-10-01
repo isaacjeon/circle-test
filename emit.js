@@ -6,7 +6,8 @@ ctx.fillStyle = "white";
 ctx.textAlign = "center";
 ctx.fillText("Click anywhere in this window.", canvas.width/2, canvas.height/2);
 
-var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+var maxRad = sqrt(pow(canvas.width, 2) + pow(canvas.height, 2));
 
 function emit(col) {
     var pos = getCenterPos();
@@ -17,7 +18,7 @@ function emit(col) {
     function frame() {
         if (rad == 10)
             emit((col + 1) % 7);
-        if (rad == 100) {
+        if (rad == maxRad) {
           clearInterval(id);
         } else {
             rad++;
