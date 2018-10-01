@@ -6,7 +6,7 @@ canvas.height = 500;
 ctx.font="30px Arial";
 ctx.fillStyle = "white";
 ctx.textAlign = "center";
-ctx.fillText("Click anywhere in this window.", canvas.width/2, canvas.height/2);
+ctx.fillText("Click anywhere inside this box.", canvas.width/2, canvas.height/2);
 
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
