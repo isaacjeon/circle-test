@@ -3,14 +3,23 @@ var ctx = canvas.getContext("2d");
 ctx.c.width  = window.innerWidth;
 ctx.c.height = window.innerHeight;
 
-function draw(e) {
+function emit(e) {
     var pos = getMousePos(c, e);
+    var rad = 0;
+    var id = setInterval(frame, 10);
     x = pos.x;
     y = pos.y;
     ctx.strokeStyle = "red";
-    ctx.beginPath();
-    ctx.arc(x, y, 50, 0, 2*Math.PI);
-    ctx.stroke();
+    function frame() {
+        if (pos == 100) {
+          clearInterval(id);
+        } else {
+            rad++; 
+            ctx.beginPath();
+            ctx.arc(x, y, 50, rad, 2*Math.PI);
+            ctx.stroke();
+        }
+    }
 }
 
 function getMousePos(c, e) {
@@ -21,4 +30,4 @@ function getMousePos(c, e) {
     };
 }
 
-c.addEventListener("click", draw);
+c.addEventListener("click", emit);
