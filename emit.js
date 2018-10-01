@@ -19,4 +19,4 @@ function getMousePos(c, e) {
     };
 }
 
-c.onclick = function(){draw(e)};
+c.addEventListener("click", draw);
