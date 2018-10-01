@@ -19,7 +19,7 @@ function emit(col) {
     function frame() {
         if (rad == 10)
             emit((col + 1) % 7);
-        if (rad == 353) {
+        if (rad == 354) {
           clearInterval(id);
         } else {
             rad++;
