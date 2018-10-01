@@ -1,7 +1,7 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-c.width  = window.innerWidth;
-c.height = window.innerHeight;
+c.style.width  = window.innerWidth;
+c.style.height = window.innerHeight;
 
 function emit(e) {
     var pos = getMousePos(c, e);
