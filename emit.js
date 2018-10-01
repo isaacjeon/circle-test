@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d");
 ctx.font="100% Arial";
 ctx.textAlign = "center";
 ctx.fillStyle = "white";
-ctx.fillText("Click anywhere in this window", canvas.width/2, canvas.height/2);
+ctx.fillText("Click anywhere in this window.", canvas.width/2, canvas.height/2);
 
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
