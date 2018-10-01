@@ -3,8 +3,8 @@ var ctx = canvas.getContext("2d");
 c.style.width  = window.innerWidth;
 c.style.height = window.innerHeight;
 
-function emit(e) {
-    var pos = getMousePos(c, e);
+function emit() {
+    var pos = getCenterPos();
     var rad = 0;
     var id = setInterval(frame, 10);
     x = pos.x;
@@ -22,12 +22,12 @@ function emit(e) {
     }
 }
 
-function getMousePos(c, e) {
+function getCenterPos() {
     var rect = c.getBoundingClientRect();
     return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
+      x: rect.width - rect.left,
+      y: rect.height - rect.top
     };
 }
 
-c.addEventListener("click", emit);
+c.onload = function(){emit()};
