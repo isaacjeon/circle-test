@@ -16,7 +16,7 @@ function emit(col) {
     x = pos.x;
     y = pos.y;
     var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = colors[count];
+    ctx.strokeStyle = colors[col];
     function frame() {
         if (rad == 10)
             emit((col + 1) % 7);
