@@ -1,7 +1,7 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-ctx.font="100% Arial";
+ctx.font="30px Arial";
 ctx.fillStyle = "white";
 ctx.textAlign = "center";
 ctx.fillText("Click anywhere in this window.", canvas.width/2, canvas.height/2);
