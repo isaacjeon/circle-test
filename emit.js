@@ -1,7 +1,5 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-c.style.width = window.innerWidth;
-c.style.height = window.innerHeight;
 
 ctx.font="100% Arial";
 ctx.textAlign = "center";
@@ -38,11 +36,19 @@ function getCenterPos() {
     };
 }
 
-var firstClick = true;
-c.onclick = function(){
-    if (firstClick) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        firstClick = false;
-    }
+window.addEventListener('resize', resizeCanvas, false);
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var firstClick = true;
+    c.onclick = function(){
+        if (firstClick) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            firstClick = false;
+        }
     emit(0);
-};
+    };
+}
+resizeCanvas();
+
