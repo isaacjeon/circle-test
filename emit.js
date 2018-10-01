@@ -6,7 +6,7 @@ var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 var count = 0;
 
 function emit() {
-    var pos = getCenterPos();
+    var pos = getMousePos(e);
     var rad = 0;
     var id = setInterval(frame, 10);
     x = pos.x;
@@ -29,12 +29,12 @@ function emit() {
     }
 }
 
-function getCenterPos() {
+function getMousePos(e) {
     var rect = c.getBoundingClientRect();
     return {
-      x: (rect.width - rect.left)/2,
-      y: (rect.height - rect.top)/2
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top
     };
 }
 
-c.onclick = function(){emit()};
+c.addEventListener("click", emit);
