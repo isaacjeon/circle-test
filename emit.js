@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 c.style.width = window.innerWidth;
 c.style.height = window.innerHeight;
 
-ctx.font="20% Arial";
+ctx.font="100% Arial";
 ctx.textAlign = "center";
 ctx.fillText("Click anywhere in this window", canvas.width/2, canvas.height/2);
 
@@ -12,7 +12,7 @@ var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 function emit(col) {
     var pos = getCenterPos();
     var rad = 0;
-    var id = setInterval(frame, 100);
+    var id = setInterval(frame, 10);
     x = pos.x;
     y = pos.y;
     function frame() {
