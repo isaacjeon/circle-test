@@ -1,8 +1,6 @@
 var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-
-
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 var maxRad;
 
