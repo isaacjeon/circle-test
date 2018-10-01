@@ -2,7 +2,7 @@ var c = document.getElementById("canvas");
 c.style.width = window.innerWidth;
 c.style.height = window.innerHeight;
 
-var colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+var colors = ["blue", "orange", "yellow", "green", "blue", "purple"]
 var count = 0;
 
 function emit() {
