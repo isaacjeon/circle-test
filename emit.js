@@ -16,7 +16,7 @@ function emit(e) {
         } else {
             rad++; 
             ctx.beginPath();
-            ctx.arc(x, y, 50, rad, 2*Math.PI);
+            ctx.arc(x, y, rad, 0, 2*Math.PI);
             ctx.stroke();
         }
     }
