@@ -2,7 +2,6 @@ var c = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-var maxRad;
 
 function emit(col) {
     var pos = getCenterPos();
@@ -13,7 +12,7 @@ function emit(col) {
     function frame() {
         if (rad == 10)
             emit((col + 1) % 7);
-        if (rad == maxRad) {
+        if (rad == 200) {
           clearInterval(id);
         } else {
             rad++;
@@ -37,7 +36,6 @@ window.addEventListener('resize', resizeCanvas, false);
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    maxRad = Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2));
 
     var firstClick = true;
     c.onclick = function(){emit(0);};
