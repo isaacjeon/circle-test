@@ -37,7 +37,7 @@ window.addEventListener('resize', resizeCanvas, false);
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    maxRad = sqrt(pow(canvas.width, 2) + pow(canvas.height, 2));
+    maxRad = pow((pow(canvas.width, 2) + pow(canvas.height, 2)), 0.5);
 
     var firstClick = true;
     c.onclick = function(){emit(0);};
