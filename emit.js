@@ -5,8 +5,8 @@ c.style.height = window.innerHeight;
 var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 var count = 0;
 
-function emit(e) {
-    var pos = getMousePos(e);
+function emit() {
+    var pos = getCenterPos();
     var rad = 0;
     var id = setInterval(frame, 100);
     x = pos.x;
@@ -29,12 +29,12 @@ function emit(e) {
     }
 }
 
-function getMousePos(e) {
+function getCenterPos() {
     var rect = c.getBoundingClientRect();
     return {
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
+      x: (rect.width - rect.left)/2,
+      y: (rect.height - rect.top)/2
     };
 }
 
-c.addEventListener("click", emit);
+c.onclick = function(){emit()};
