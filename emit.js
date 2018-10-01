@@ -30,4 +30,4 @@ function getCenterPos() {
     };
 }
 
-c.onload = function(){emit()};
+c.onclick = function(){emit()};
