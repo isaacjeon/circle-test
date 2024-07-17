@@ -1,2 +1,2 @@
-# color-page
-[Color Page](https://isaacjeon.github.io/color-page/)
+# circle-test
+[Circle Test](https://isaacjeon.github.io/circle-test/)
