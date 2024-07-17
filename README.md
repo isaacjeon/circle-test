@@ -1,2 +1,2 @@
-# rainbow-generator
-[Rainbow Generator](https://isaacjeon.github.io/rainbow-generator/)
+# color-page
+[Color Page](https://isaacjeon.github.io/color-page/)
